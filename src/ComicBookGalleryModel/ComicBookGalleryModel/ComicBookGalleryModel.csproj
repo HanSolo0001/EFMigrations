@@ -71,6 +71,10 @@
     <Compile Include="Migrations\201703200215245_AddBioPropertyToArtist.Designer.cs">
       <DependentUpon>201703200215245_AddBioPropertyToArtist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703210356355_ComicBookAverageRatingEntity.cs" />
+    <Compile Include="Migrations\201703210356355_ComicBookAverageRatingEntity.Designer.cs">
+      <DependentUpon>201703210356355_ComicBookAverageRatingEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\ComicBook.cs" />
@@ -91,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703200215245_AddBioPropertyToArtist.resx">
       <DependentUpon>201703200215245_AddBioPropertyToArtist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703210356355_ComicBookAverageRatingEntity.resx">
+      <DependentUpon>201703210356355_ComicBookAverageRatingEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

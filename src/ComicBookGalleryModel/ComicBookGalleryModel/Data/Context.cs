@@ -1,4 +1,5 @@
-﻿using ComicBookGalleryModel.Models;
+﻿using ComicBookGalleryModel.Migrations;
+using ComicBookGalleryModel.Models;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
@@ -16,8 +17,13 @@ namespace ComicBookGalleryModel.Data
 
         public Context()
         {
+#if DEBUG
+
             // Disable the database initializer in favor of using Code First Migrations.
             Database.SetInitializer<Context>(null);
+#else
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Context, Configuration>());
+#endif
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -28,7 +34,7 @@ namespace ComicBookGalleryModel.Data
 
             // Using the fluent API to configure the precision and scale
             // for the ComicBook.AverageRating property.
-            modelBuilder.Entity<ComicBook>()
+            modelBuilder.Entity<ComicBookAverageRating>()
                 .Property(cb => cb.AverageRating)
                 .HasPrecision(5, 2);
         }
