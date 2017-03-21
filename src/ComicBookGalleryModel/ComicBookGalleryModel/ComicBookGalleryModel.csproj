@@ -63,10 +63,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Context.cs" />
+    <Compile Include="Migrations\201703170628235_Initial.cs" />
+    <Compile Include="Migrations\201703170628235_Initial.Designer.cs">
+      <DependentUpon>201703170628235_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703200215245_AddBioPropertyToArtist.cs" />
+    <Compile Include="Migrations\201703200215245_AddBioPropertyToArtist.Designer.cs">
+      <DependentUpon>201703200215245_AddBioPropertyToArtist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\ComicBook.cs" />
     <Compile Include="Models\ComicBookArtist.cs" />
+    <Compile Include="Models\ComicBookAverageRating.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Series.cs" />
     <Compile Include="Program.cs" />
@@ -75,6 +84,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703170628235_Initial.resx">
+      <DependentUpon>201703170628235_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703200215245_AddBioPropertyToArtist.resx">
+      <DependentUpon>201703200215245_AddBioPropertyToArtist.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
